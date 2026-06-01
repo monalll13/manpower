@@ -1,0 +1,184 @@
+.employee-list {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.list-header {
+  margin-bottom: 30px;
+}
+
+.list-header h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.employee-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  padding: 16px;
+  transition: all 0.2s ease;
+  gap: 12px;
+}
+
+.employee-item:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+  background: #f8f9ff;
+}
+
+.emp-info {
+  flex: 1;
+}
+
+.emp-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.emp-id {
+  font-size: 12px;
+  color: #999;
+}
+
+.emp-actions {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e9ecef;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+  color: #333;
+}
+
+.status-select:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.12);
+}
+
+.emp-edit {
+  min-height: 44px;
+  border: none;
+  background: #667eea;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.emp-edit:hover {
+  background: #5a63c3;
+}
+
+.status-select.status-มา {
+  border-color: #28a745;
+  color: #155724;
+}
+
+.status-select.status-ลา {
+  border-color: #ffc107;
+  color: #856404;
+}
+
+.status-select.status-หยุด {
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.status-select.status-สลับวัน {
+  border-color: #0066cc;
+  color: #084298;
+}
+
+.list-stats {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.stat-item {
+  font-size: 24px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+@media (max-width: 768px) {
+  .employee-item {
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .emp-info {
+    flex: 1 1 60%;
+  }
+
+  .emp-status-selector {
+    flex: 1 1 35%;
+  }
+
+  .status-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .list-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .list-header h2 {
+    font-size: 20px;
+  }
+}
